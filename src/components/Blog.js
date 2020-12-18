@@ -22,13 +22,13 @@ const Blog = () => {
 		let list = [];
 		let result = [];
 
-		blogs.map(blogPost => {
+		blogs.map((blogPost) => {
 			return list.push(
 				<div className='row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'>
 					<div className='col p-4 d-flex flex-column position-static'>
 						<strong className='d-inline-block mb-2 text-primary'>{blogPost.category}</strong>
 						<h3 className='mb-0'>{blogPost.title}</h3>
-						<div className='mb-1 text-muted'>Nov 12</div>
+						<div className='mb-1 text-muted'>{blogPost.date_created}</div>
 						<p className='card-text mb-auto'>
 							{blogPost.excerpt}
 						</p>
